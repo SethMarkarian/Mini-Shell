@@ -1,0 +1,7 @@
+Authors: Chloe Dorward, Seth Markarian
+
+To build the executable, navigate to ChloeSethShell/src and type:
+	make
+
+To run the program, navigate to ChloeSethShell/install/bin and type:
+	./lsh

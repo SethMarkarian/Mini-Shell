@@ -1,0 +1,61 @@
+.TH lsh(1)
+.SH NAME
+lsh \- Lafayette Shell
+
+.SH SYNOPSIS
+.B ./lsh
+
+.SH DESCRIPTION
+.B lsh
+.SS "Variables"ù
+.PP
+Environment Variables
+.B Setting
+An environment variable can be set by \fIVARNAME\fR=\fIvalue\fR
+.B Deleting
+An environment variable can be deleted by \fIVARNAME\fR=
+.B Using
+An environment variable can be referred to by $\fIVARNAME\fR
+.PP
+Job Variables
+.B Using
+A job number can be used in place of a process ID by %\fIJOBNUM\fR
+.SS "Common Shell Features"
+.B linux commands
+Linux commands such as ls, echo, and pwd are supported
+.B running programs
+Programs can be run by providing the path to the executable file (ex: /usr/bin/env)
+.B piping
+Programs can be piped together with the format: cmd1 | cmd2 | cmd3
+.B signal catching
+When SIGSTP or SIGINT are caught, they are sent to the foreground process and its children. To send signals to a background process, use the \fBkill\fR Linux command.
+.SS "LSH Specific Commands"
+.B jobs
+Lists all background and suspended jobs.  For each job, this command lists the job number, process id, a status of Running or Stopped (for suspended jobs) and the command that the job is executing.
+.B bg
+Restarts a job by sending it a SIGCONT signal and then runs it in the background.
+.B fg
+Restarts a job by sending it a SIGCONT signal and then runs it in the foreground.
+.B &
+Runs job in the background
+.B jsum
+Reports process statistics on each external command (job) completed since the shell started. Table includes pid, status, elapsed time, minor & major page faults, and command line
+.B quit
+Quits the shell
+
+.SH OPTIONS
+.B lsh
+There are no options
+
+.SH BUGS
+.B lsh
+Cannot execute another instance of lsh from inside the lsh shell
+Cannot pipe echo commands together
+
+.SH AUTHOR
+.B lsh
+Chloe Dorward
+Seth Markarian
+
+.SH SEE ALSO
+csh(1)

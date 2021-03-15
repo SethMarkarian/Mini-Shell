@@ -1,0 +1,45 @@
+Team Members: Chloe Dorward and Seth Markarian
+
+Group 1:
+We learned how to set environment variables. Althoug putenv's syntax was convenient,
+we discovered that it caused a memory leak.
+
+Group 2:
+We learned that there were multiple execv-type functions, and we learned about the differences
+between them.
+
+Group 3:
+We learned how to use wait very thoroughly.
+We used a linked list to store different process information.
+We used volatile variables in our signal handler and blocked and unblocked masks in the parent
+process whenever we read or changed these variables.
+We learned about the difference between foreground and background processes.
+We accidentally had an infinite loop in our signal handler, but were able to identify and fix
+the issue quickly.
+We learned about killpgid().
+We learned how to use printf to format table-like outputs.
+We learned that the wait function reaps zombie children.
+We learned how to determine the details of how/why a process stopped or terminated.
+
+Group 4:
+We learned about piping syntax.
+We learned how to redirect STDIN and STDOUT to different file locations.
+We learned about broken pipe errors.
+Currently, our piping doesn't work for certain functions such as "more".
+
+Group 5:
+We learned how to use time().
+We learned how to use the rusgage struct.
+
+For our man page, we learned the formatting of the man page script.
+Unfortunately, we were not able to figure out how to display our man page.
+We believe that we would have to make a configuration file and use this as an option when running man
+
+Overall, our greatest obstacles were finding the correct system calls, and ensuring that we used them
+how they were meant to be used.
+Additionally, we did not have time to test on programs other than the Linux commands.
+
+Enhancements:
+Allow using "more" and other Linux calls.
+Allow running the shell from inside the shell.
+Allow input and output redirection with > and <
